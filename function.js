@@ -31,4 +31,57 @@ function divide(l,p){
 }
 divide(
 console.log(divide(25,5))
+//console.log(divide(34,0))
+//the 2nd argument is missing, so the engine ends up givingan undefined result so it will returnNan
 )
+
+function salutation(){
+    console.log("I love you!")
+}
+salutation()
+
+//VARIABLE SCOPE
+//Local variables
+//this ia a variable that has limited scope(accessed in a function where it is declared)
+//a global variable is a variable that can be accessed outside any function
+
+//local variables example
+function multiply(){
+    let localVariable1 = 6;
+    let localVariable2 = 3;
+    let product = localVariable1*localVariable2;
+    return product
+}
+console.log(multiply())
+
+// function addition({
+//     let addedValue = localVariable1 + localVariable2;
+//     return addedValue
+// })
+//console.log(addition())
+
+//global variables example
+let globalVariable1 = 6;
+let globalVariable2 = 6;
+function division() {
+    let result1 = globalVariable1/globalVariable2
+    return result1
+}
+console.log(division())
+
+//arrow functions
+
+const sum = (a,b) =>{
+    return a+b
+}
+console.log(sum(22,11))
+
+const sum2 = (a,b) => a+b
+// consise way of writing an arrow function that one line of code in the body
+
+//example 2
+const sum3 = (a,b) =>{
+  let result = (a+b)  
+  return `The result is  ${result} per the calculation`
+}
+console.log(sum3(3,1))
